@@ -18,7 +18,7 @@ function Note() {
 
   return (
     <>
-      <Text id="area" rows="10" cols="50"></Text>
+      <Text ></Text>
     </>
   );
 }
