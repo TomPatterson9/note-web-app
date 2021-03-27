@@ -1,7 +1,12 @@
 import styled from "styled-components";
 import "../styles/index.css";
 
-function Login() {
+function Login({ parentCallback, visibilityConfig }) {
+  const onTrigger = (event) => {
+    parentCallback(true);
+    event.preventDefault();
+  };
+
   const LoginCard = styled.div`
     width: 30vw;
     height: 50vh;
@@ -20,6 +25,7 @@ function Login() {
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-family: "Roboto", sans-serif;
+    visibility: ${visibilityConfig};
   `;
   const InputField = styled.input`
     width: 250px;
@@ -45,15 +51,14 @@ function Login() {
     border-radius: 4px;
     margin: 10px;
     text-align: center;
-    font-size:20px;
-    letter-spacing:2px;
+    font-size: 20px;
+    letter-spacing: 2px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   `;
 
   const Title = styled.h3`
-    font-size:26px;
-    color:white;
-
+    font-size: 26px;
+    color: white;
   `;
 
   return (
@@ -64,7 +69,7 @@ function Login() {
         <br />
         <br />
         <InputField type="password" placeholder="Password" />
-        <LoginButton>Login</LoginButton>
+        <LoginButton onClick={onTrigger}>Login</LoginButton>
       </LoginCard>
     </div>
   );
