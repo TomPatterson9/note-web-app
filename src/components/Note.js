@@ -14,6 +14,7 @@ function Note() {
     overflow: auto;
     border:0px;
     font-family: 'Roboto', sans-serif;
+    pointer-events:none;
   `;
 
   return (
