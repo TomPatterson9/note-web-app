@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const SideBar = styled.div`
   height: 100%;
-  width: 200px;
+  width: 10vw;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -10,6 +10,7 @@ const SideBar = styled.div`
   overflow-x: hidden;
   padding-top: 40px;
   background-color: #220c10;
+  min-width:150px;
   
 `;
 const Items = styled.li`
